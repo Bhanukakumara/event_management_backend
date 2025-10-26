@@ -55,3 +55,55 @@ A **MERN Stack Internship Task** — Full-featured event management system with 
 ---
 
 ## Project Structure
+event_management_backend/
+├── config/
+│   └── db.js
+├── controllers/
+│   ├── authController.js
+│   ├── eventController.js
+│   └── bookingController.js
+├── models/
+│   ├── User.js
+│   ├── Event.js
+│   └── Booking.js
+├── middleware/
+│   ├── auth.js
+│   └── errorHandler.js
+├── routes/
+│   ├── auth.js
+│   ├── events.js
+│   └── bookings.js
+├── utils/
+│   └── sendEmail.js
+├── uploads/                  # Event images
+├── .env
+├── .env.example
+├── server.js
+└── package.json
+
+
+---
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) (v16+)
+- [MongoDB Atlas](https://cloud.mongodb.com) **(Recommended)** or Local MongoDB with **Replica Set**
+- Gmail account + [App Password](https://myaccount.google.com/apppasswords)
+
+---
+
+## Setup Instructions
+
+### 1. Clone & Install
+```bash
+git clone <your-repo-url>
+cd event_management_backend
+npm install
+
+PORT=5000
+MONGO_URI=mongodb+srv://<user>:<pass>@cluster0.xxxx.mongodb.net/eventbooking?retryWrites=true&w=majority
+JWT_SECRET=your_very_strong_secret_key
+JWT_EXPIRE=1h
+
+NODEMAILER_EMAIL=yourgmail@gmail.com
+NODEMAILER_PASS=your-app-password
